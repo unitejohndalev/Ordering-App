@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+}
+
+
+
+/* DRINKS CONTAINER */
+.drinksproduct-container {
+
+  display: flex;
+}
+.products-container {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  row-gap: 7em;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+
+
+}
+.drinks--container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+/* DRINK-BUTTON */
+
+.btn-container {
+  position: absolute;
+  top: -3.9em;
+  left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 4em;
+  width: 4em;
+}
+
+/* .btn-container button {
+  width: 3.5em;
+  height: 3.5em;
+  position: absolute;
+  top: 0.7em;
+  left: 0.5em;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(188, 137, 137, 0.31);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+} */
+
+.btn-container > img {
+  position: absolute;
+  width: 100%;
+  margin: 0 0.2em 1.1em 0;
+}
+
+/* DRINK-PRODUCTS */
+
+.orderingapp-container{
+  height: 27em;
+  margin: 0 auto;
+  background: rgba(223, 192, 192, 0.33);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  margin-top: 5em;
+  position: relative;
+  z-index: 0;
+  padding-top: 1.8em;
+  display: block;
+  max-width: 400px;
+ 
+
+}
+
+.drink--section {
+  position: relative;
+  display: flex;
+  width: 10em;
+  margin-top: 1.8em;
+  left: 0.51em;
+}
+
+.drink--section > img {
+  width: 70%;
+  height: 7.5em;
+  position: absolute;
+  z-index: 2;
+  top: -4.5em;
+  left: 5.2em;
+}
+
+.drink-section {
+  width: 10em;
+  background: rgba(148, 146, 167, 0.33);
+  height: 3.9em;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+}
+
+.heart-icon {
+  position: absolute;
+  z-index: 1;
+  top: -0.5em;
+  font-size: 1rem;
+}
+
+.drink-section > p {
+  position: absolute;
+  top: -0.65em;
+  left: 1em;
+  font-family: var(--montserrat);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.addsub-btn {
+  display: flex;
+  height: 1.6em;
+  width: 50%;
+  margin: 1em 0 0 1em;
+}
+.addsub-btn > P {
+  width: 1em;
+  background-color: transparent;
+  text-align: center;
+  font-family: var(--montserrat);
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.addsub-btn > button {
+  width: 1.8em;
+  border: none;
+  background: transparent;
+}
+
+.cartprice {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+
+  top: 2.5em;
+}
+
+.cartprice > button {
+  width: 40%;
+  font-family: var(--montserrat);
+  font-size: 0.7em;
+  margin-left: 1.5em;
+  border: none;
+  border-radius: 2px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(2px);
+}
+.cartprice > button p {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.cartprice > p {
+  width: 25%;
+  border: transparent;
+  font-size: 0.8em;
+  font-weight: 500;
+  font-family: var(--montserrat);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: transparent;
+}
+

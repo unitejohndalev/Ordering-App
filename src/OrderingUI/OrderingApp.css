@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+        background-color: #DCDDD6;
+}
+
+.orderingApp-container {
+    height: 100%;
+
+}
+
+nav {
+    height: 6em;
+
+    
+}
+
+nav > img {
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    width: 80%;
+    height: 10%;
+}
+
+/* .main-container {
+    width: 100%;
+
+    display: flex;
+} */
+
+.img-container {
+    background-image: url('/public/images/OrderingAppImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 20em;
+ 
+}
+
+
+
+
+
+footer {
+
+
+    width: 100%;
+}
+
+footer > img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+    bottom: -.5em;
+ 
+
+}
+
+
+
