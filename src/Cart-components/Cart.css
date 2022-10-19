@@ -1,0 +1,96 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--montserrat);
+}
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: var(--montserrat);
+} */
+
+.cart-container {
+    border: none;
+   
+}
+
+#cart {
+    position: absolute;
+    z-index: 10;
+   right: 1em;
+   top: 3.7em;
+   width: 2.5em;
+   border: none;
+}
+
+
+.cart-payment-container {
+    border: solid;
+    width: 20em;
+    height: 15em;
+    position: absolute;
+    z-index: 10;
+    top: 6.5em;
+    right: 1em;
+   background: rgba(118, 116, 124, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.orderslist-container {
+
+    background: white;
+    border:none;
+    height: 10em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.paymentbtn-container {
+    border: none;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.paymentbtn-container > button {
+    width: 7em;
+    padding: .4em .5em .4em .5em;
+    font-weight: 500;
+        border-radius: .2em;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* GCASH CONTAINER SECTION */
+.gcash-container {
+       background: white;
+    border:none;
+    height: 10em;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 2em;
+
+}
+
+.gcash-container > img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

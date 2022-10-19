@@ -4,69 +4,69 @@
   box-sizing: border-box;
 }
 
-.drink-img {
-    width: 2.7em;
-  height: 7.6em;
-  position: absolute;
+#cake-img {
+   width: 6em;
+  height: 4.5em;
+  position: relative;
   z-index: 2;
-  top: -4.8em;
-  left: 7.3em;
-  /* border: solid; */
+  top: -2.3em;
+  left: 5em;
+/* border: solid; */
+
+
 }
 
-.drinks-components {
+.cakes-components {
   position: absolute;
   top: 0;
+    /* border: solid; */
   width: 100%;
 }
 /* DRINKS CONTAINER */
 
-.drinks-wrapper {
+.cakes-wrapper {
   display: flex;
   /* border: solid blue; */
   width: 100%;
   justify-content: center;
-
-
-  
-
+  align-items: center;
+  justify-items: center;
 }
 
-.products-container {
-
+.cakes-info-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
     column-gap: 1em;
+
     row-gap: 1em;
-    height: 25em;
     /* border: solid yellow; */
-
-
-
-
-}
-
-
-.drinks-container {
-  border: none;
+    width: 100%;
+  height: 25em;
+    /* border: solid; */
 
 }
 
 /* NO RE-USE */
-.drinks--container {
+.cakes--container {
 
   /* border: solid black; */
   display: flex;
+  width: 100%;
+
+  justify-content: center;
+}
+
+.cakesMain-container {
+    display: flex;
   justify-content: center;
 }
 
 /* DRINK-BUTTON */
 /* NOT RE-USE */
-.btn-container {
+.cakesbtn-container {
   position: absolute;
-  top: -5.9em;
-  left: 1em;
+  top: -4.5em;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,19 +74,22 @@
   height: 4em;
   width: 4em;
 
+
+left: 10.5em;
+
+
 }
 
 
 /* NO RE-USE */
-.btn-container > img {
+.cakesbtn-container > img {
   position: absolute;
-  width: 100%;
+  width: 6em;
+  height: 6em;
   margin: 0 0.2em 1.1em 0;
-  /* border: solid; */
-  top: 1em;
+
+
 }
-
-
 
 
 

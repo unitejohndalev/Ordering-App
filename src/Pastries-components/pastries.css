@@ -4,232 +4,88 @@
   box-sizing: border-box;
 }
 
-:root {
-  --montserrat: "Montserrat", sans-serif;
-}
 
-.cakesproduct-container {
-    display: flex;
-  width: 90%;
-  margin: 0 auto;
-
-
-}
-
-.cakes-product-container {
-    position: absolute;
-  top: 3.7em;
-  left: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.25em;
-  row-gap: 4.3em;
-  max-width: 360px;
-  width: 90%;
-  margin: 0 auto;
-
-}
-
-.cakes-section-img {
-position:absolute;
-top: -6em;
-left: 3em;
-width: 7em;
-height: 6em;
-
-
-}
-.cakesMain-container {
-    position: absolute;
-  top: -3.4em;
-  left: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4em;
-  width: 4em;
-}
-
-
-.pastriesMain-container {
+#pastry-img {
+    width: 5.2em;
+  height: 5em;
   position: absolute;
-  top: -3.5em;
-  left: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  height: 4em;
-  width: 4em;
-
-}
-.cakes-container {
-    display: flex;
-  width: 10em;
-  position: relative;
-  top: -.1em;
-}
-.cakes-container > img {
-  width: 6.9em;
-  height: 4.5em;
-  position: relative;
   z-index: 2;
   top: -2.3em;
-  left: 4.1em;
+  left: 5.5em;
+  /* border: solid; */
 }
 
-.pastriesMain-container > img {
+.pastries-components {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+}
+
+/* DRINKS CONTAINER */
+.pastry-wrapper {
+  display: flex;
+  /* border: solid blue; */
+  width: 100%;
+  justify-content: center;
+
+}
+
+
+
+.pastries-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+
+    row-gap: 1em;
+    /* border: solid yellow; */
+    width: 100%;
+  height: 25em;
+ 
+
+}
+
+/* NO RE-USE */
+.pastries--container {
+
+  /* border: solid black; */
+  display: flex;
+  justify-content: center;
+
+
+  
+
+
+}
+
+/* DRINK-BUTTON */
+/* NOT RE-USE */
+.pastriesbtn-container {
+  position: absolute;
+  top: -4.1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 4em;
+  width: 4em;
+  height: 4em;
+left: 6em;
+
+}
+
+
+/* NO RE-USE */
+.pastries-section-img {
   position: absolute;
   width: 100%;
   margin: 0 0.2em 1.1em 0;
-}
-.orderingapp-container {
-  height: 27em;
-  margin: 0 auto;
-  background: rgba(223, 192, 192, 0.33);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-  border-radius: 10px;
-  margin-top: 5em;
-  position: relative;
-  z-index: 0;
-  display: block;
-  max-width: 400px;
-
-
-}
-.pastriesproduct-container {
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-
-
-
-}
-.pastries-product-container {
-  position: absolute;
-  top: 3.6em;
-  left: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.25em;
-  row-gap: 3.8em;
-  max-width: 360px;
-  width: 90%;
-  margin: 0 auto;
 
 }
 
-.pastries-section-img {
-  position: absolute;
-  top: -3.5em;
-  left: -.5em;
-
-}
-
-.pastries--container {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.pastry-container {
-  display: flex;
-  width: 10em;
 
 
-}
 
-.pastry-container > img {
-  width: 100%;
-  height: 5em;
-  position: relative;
-  z-index: 2;
-  top: -2.3em;
-  left: 2.5em;
-}
-
-.pastry-section {
-  width: 10em;
-  background: rgba(148, 146, 167, 0.33);
-  height: 3.9em;
-  position: absolute;
-  z-index: 1;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-  border-radius: 5px;
-
-}
-
-.pastry-heart-icon {
-  position: absolute;
-  z-index: 1;
-  top: -0.5em;
-  font-size: 1rem;
-}
-
-.pastry-section > p {
-  position: absolute;
-  top: -0.65em;
-  left: 1em;
-  font-family: var(--montserrat);
-  font-weight: 500;
-  font-size: 1.1rem;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.pastry-btn {
-  display: flex;
-  height: 1.6em;
-  width: 50%;
-  margin: 1em 0 0 1em;
-}
-
-.pastry-btn > p {
-  width: 1em;
-  background-color: transparent;
-  text-align: center;
-  font-family: var(--montserrat);
-  font-weight: 500;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.pastry-btn > button {
-  width: 1.8em;
-  border: none;
-  background: transparent;
-}
-
-.pastry-cartprice {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  top: 2.5em;
-}
-
-.pastry-cartprice > button {
-  width: 40%;
-  font-family: var(--montserrat);
-  font-size: 0.7em;
-  margin-left: 1.5em;
-  border: none;
-  border-radius: 2px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  backdrop-filter: blur(2px);
-}
-
-.pastry-cartprice > button p {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
-}
-
-.pastry-cartprice > p {
-  width: 25%;
-  border: transparent;
-  font-size: 0.8em;
-  font-weight: 500;
-  font-family: var(--montserrat);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background: transparent;
-}
