@@ -11,6 +11,7 @@ function LogIn() {
     }
   return (
     <div className="login-wrapper">
+   
       <div className="login-container">
         <div className="bgImage-container">
           <img src="./login-images/bg1.webp" />
@@ -26,6 +27,7 @@ function LogIn() {
           </button>
         </div>
       </div>
+  
     </div>
   );
 }
