@@ -1,17 +1,36 @@
 import React, {useState} from "react";
 import "../Cart-components/Cart.css";
+import { CartOrders } from "./CartOrders";
+import { reactLocalStorage } from "reactjs-localstorage";
 
+// getting the values of local storage
+const getDatafromLS = () => {
+  const data = localStorage.getItem("books");
+  if (data) {
+    return JSON.parse(data);
+  } else {
+    return [];
+  }
+};
 function Cart() {
 
-    const [show, setShow] = useState()
-    const toggle = () => {
-        setShow(prevShow => !prevShow)
-    }
+  const [books, setbooks] = useState(getDatafromLS());
 
-    const [gcash, setGcash] = useState()
-    const gcashbtn = () => {
-        setGcash(prevGcash => !prevGcash)
-    }
+  const [show, setShow] = useState();
+  const toggle = () => {
+    setShow((prevShow) => !prevShow);
+  };
+
+  const [gcash, setGcash] = useState();
+  const gcashbtn = () => {
+    setGcash((prevGcash) => !prevGcash);
+  };
+    // const datas = localStorage.getItem("productInfo");
+    // const [productData, setProductData] = useState(datas);
+
+
+
+
   return (
     <div className="cart-container">
       <img
@@ -21,13 +40,18 @@ function Cart() {
       />
       {show && (
         <div className="cart-payment-container">
-          <div className="orderslist-container"></div>
+          <div className="orderslist-container">
+            <CartOrders books={books} />
+          </div>
           <div className="paymentbtn-container">
             <button>CASH</button>
             <button onClick={gcashbtn}>G-CASH</button>
           </div>
-          {gcash &&<div className="gcash-container">
-            <img src="./gcash-images/barcode.png"/></div>}
+          {gcash && (
+            <div className="gcash-container">
+              <img src="./gcash-images/barcode.png" />
+            </div>
+          )}
         </div>
       )}
     </div>

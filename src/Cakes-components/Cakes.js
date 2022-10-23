@@ -19,10 +19,10 @@ export default function Cakes() {
     });
   });
 
-  const pastry = cakesData.map((pastry) => {
+  const pastry = cakesData.map((pastry, past) => {
     return (
       <div>
-            {show && <CakesProduct pastry={pastry} />}
+            {show && <CakesProduct pastry={pastry} key={past} />}
       </div>
     
     );

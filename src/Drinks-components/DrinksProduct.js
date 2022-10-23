@@ -1,58 +1,84 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 import "../Drinks-components/Drinks.css";
+// import Cart from "../Cart-components/Cart";
+
+
+// getting the values of local storage
+const getDatafromLS = () => {
+  const data = localStorage.getItem("books");
+  if (data) {
+    return JSON.parse(data);
+  } else {
+    return [];
+  }
+};
 
 export default function DrinksProduct(props) {
-
+  
+  
+  // main array of objects state || books state || books array of objects
+  const [books, setbooks] = useState(getDatafromLS());
+  const [productName, setProductName] = useState(props.OrderApp.productName)
+  
+  
+  
   // ADD AND SUB BUTTONS AND PREVENTING CONTINOUS INCRE AND DECRE
   const [count, setCount] = useState(0);
 
   const add = () => {
-    if(count < 10) {
-
-      setCount(prevCount => prevCount + 1);
+    if (count < 10) {
+      setCount((prevCount) => prevCount + 1);
     }
   };
   const sub = () => {
-  if(count <= 0) {
-      return
+    if (count <= 0) {
+      return;
     } else {
-
-      setCount(prevCount => prevCount - 1);
+      setCount((prevCount) => prevCount - 1);
     }
   };
 
-
   // SETTING WHEN TO SHOW PRODUCT AND FIXING SIDEEFFECTS
-   const [show, setShow] = useState();
-   const toggle = () => {
-     setShow((prevShow) => !prevShow);
-   };
+  const [show, setShow] = useState();
+  const toggle = () => {
+    setShow((prevShow) => !prevShow);
+  };
 
-   let drinkRef = useRef();
-   useEffect(() => {
-     document.addEventListener("mousedown", (e) => {
-       if (!drinkRef.current.contains(e.target)) {
-         setShow(false);
-       }
-     });
-   });
+  let drinkRef = useRef();
+  useEffect(() => {
+    document.addEventListener("mousedown", (e) => {
+      if (!drinkRef.current.contains(e.target)) {
+        setShow(false);
+      }
+    });
+  });
 
   //  SETTING THE ICON COLOR WHEN CLICK
-   const [iconColor, setIconColor] = useState(false)
-   const icontoggle = () => {
-    setIconColor(prevSet => !prevSet)
-   }
+  const [iconColor, setIconColor] = useState(false);
+  const icontoggle = () => {
+    setIconColor((prevSet) => !prevSet);
+  };
 
-  //  ADD ORDERED PRODUCTS TO CART
+  // form submit event
+  const handleAddBookSubmit = (e) => {
+    e.preventDefault();
+    // creating an object
+    let book = {
+     count,
+     productName
+    };
+    setbooks([...books, book]);
+    setCount();
+    setProductName()
+  };
 
-  const addToCart = (e) => {
-      e.preventDefault()
+  // saving data to local storage
+  useEffect(() => {
+    localStorage.setItem("books", JSON.stringify(books));
+  }, [books]);
 
-      const data = {
-
-      }
-  }
+ 
 
   return (
     <div className="product--section" ref={drinkRef}>
@@ -83,12 +109,13 @@ export default function DrinksProduct(props) {
           </button>
         </div>
         <div className="cartprice">
-          <button onClick={addToCart}>
+          <button onClick={handleAddBookSubmit}>
             <p>ORDER</p>
           </button>
-          <p>{props.OrderApp.price}</p>
+          <p>${props.OrderApp.price}</p>
         </div>
       </div>
+  
     </div>
   );
 }
