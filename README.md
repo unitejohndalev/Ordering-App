@@ -1,1 +1,3 @@
-#Ordering app for my ReactJS project
+#Unfinish
+
+#Recreating our thesis software, from androind application to web application
